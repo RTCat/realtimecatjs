@@ -1,0 +1,22 @@
+{
+  "name": "realtimecatjs",
+  "version": "0.1",
+  "authors": [
+    "LearingTech <info@learning-tech.com>"
+  ],
+  "description": "Realtimacat Js SDK",
+  "keywords": [
+    "rtc",
+    "realtimecatjs",
+    "realtimecat",
+    "webrtc"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
