@@ -1,0 +1,16 @@
+{
+  "name": "realtimecatjs",
+  "version": "0.1.1",
+  "description": "Realtimecat JS SDK",
+  "main": "realtimecat.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RTCat/realtimecatjs.git"
+  },
+  "author": "LearingTech <info@learning-tech.com>",
+  "license": "MIT ",
+  "bugs": {
+    "url": "https://github.com/RTCat/realtimecatjs/issues"
+  },
+  "homepage": "https://github.com/RTCat/realtimecatjs#readme"
+}
