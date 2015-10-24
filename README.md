@@ -18,7 +18,7 @@
     
 ```html
 <!-- 加载实时猫 JavaScript SDK -->
-<script src="http://cdn.realtimecat.com/realtimecat-0.2.min.js"></script>
+<script src="//dn-learning-tech.qbox.me/realtimecat/realtimecat-0.2.min.js"></script>
 ```
 
 ### 使用包管理软件加载实时猫SDK
