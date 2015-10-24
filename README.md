@@ -18,7 +18,7 @@
     
 ```html
 <!-- 加载实时猫 JavaScript SDK -->
-<script src="http://cdn.realtimecat.com/realtimecat-0.1.min.js"></script>
+<script src="http://cdn.realtimecat.com/realtimecat-0.2.min.js"></script>
 ```
 
 ### 使用包管理软件加载实时猫SDK
@@ -26,13 +26,13 @@
 如果使用Bower作为包管理器，直接运行以下命令安装实时猫JavaScript SDK：
 
 ```bash
-$ bower install realtimecatjs#~0.1 --save
+$ bower install realtimecatjs#~0.2 --save
 ```
 
 如果使用NPM，直接运行以下命令安装：
 
 ```bash
-$ npm install realtimecatjs@~0.1 --save
+$ npm install realtimecatjs@~0.2 --save
 ```
 
 在使用包管理软件安装完成后，仍需要在具体HTML页面中，引入下载好的实时猫JavaScript SDK。
