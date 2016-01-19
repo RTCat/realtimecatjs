@@ -37,6 +37,12 @@ $ npm install realtimecatjs@~0.2 --save
 
 在使用包管理软件安装完成后，仍需要在具体HTML页面中，引入下载好的实时猫JavaScript SDK。
 
+## Changelog
+
+0.2.3 增加监听事件的once方法，监听的事件只触发一次
+
+0.2.2 修复stream.play()方法只传width或height时，另一方为undefined的bug
+
 ## 相关资源
 
 - 实时猫官方网站：https://shishimao.com
