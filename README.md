@@ -37,7 +37,11 @@ $ npm install realtimecatjs@~0.2 --save
 
 在使用包管理软件安装完成后，仍需要在具体HTML页面中，引入下载好的实时猫JavaScript SDK。
 
+本SDK同时符合AMD和CommonJS的规范，你可以通过RequireJS或者`require('realtimecatjs')`的方式来调用实时猫JavaScript SDK。
+
 ## Changelog
+
+0.2.4 使用umd规范打包SDK，增加对AMD和CommonJS规范的支持
 
 0.2.3 增加监听事件的once方法，监听的事件只触发一次
 
