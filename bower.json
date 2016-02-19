@@ -5,6 +5,7 @@
     "LearingTech <info@learning-tech.com>"
   ],
   "description": "Realtimacat Js SDK",
+  "main":"realtimecat.min.js",
   "keywords": [
     "rtc",
     "realtimecatjs",
