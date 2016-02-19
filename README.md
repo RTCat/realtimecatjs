@@ -41,6 +41,8 @@ $ npm install realtimecatjs@~0.2 --save
 
 ## Changelog
 
+0.2.6 修复只请求音频时视频被强制带上的bug
+
 0.2.5 修复mute方法无效的bug
 
 0.2.4 使用umd规范打包SDK，增加对AMD和CommonJS规范的支持
