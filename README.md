@@ -41,6 +41,8 @@ $ npm install realtimecatjs@~0.2 --save
 
 ## Changelog
 
+0.2.5 修复mute方法无效的bug
+
 0.2.4 使用umd规范打包SDK，增加对AMD和CommonJS规范的支持
 
 0.2.3 增加监听事件的once方法，监听的事件只触发一次
