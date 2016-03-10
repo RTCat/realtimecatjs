@@ -56,6 +56,6 @@ $ npm install realtimecatjs@~0.2 --save
 ## 相关资源
 
 - 实时猫官方网站：https://shishimao.com
-- 文档中心：https://shishimao.com/docs
-- 试用：https://shishimao.com/rooms
-- Dashboard：http://dashboard.shishimao.com
+- 开发者中心：https://shishimao.com/developer-center
+- 技术演示：https://shishimao.com/rooms
+- Dashboard：https://dashboard.shishimao.com/
