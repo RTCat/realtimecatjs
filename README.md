@@ -41,6 +41,8 @@ $ npm install realtimecatjs@~0.2 --save
 
 ## Changelog
 
+0.2.8 修复stream.stop()方法的bug
+
 0.2.7 修复只请求音频时，video placeholder的地址
 
 0.2.6 修复只请求音频时视频被强制带上的bug
