@@ -6,6 +6,8 @@
 
 开发者通过实时猫JS SDK，可以进行Web端的实时视频开发。
 
+此版本实时猫JS SDK为处于测试发布阶段的v0.3 alpha版。
+
 ## 下载实时猫 JS SDK
 
 选择以下方式中的任意一种加载实时猫 JS SDK。
@@ -18,7 +20,7 @@
     
 ```html
 <!-- 加载实时猫 JavaScript SDK -->
-<script src="//dn-learning-tech.qbox.me/realtimecat/realtimecat-0.2.min.js"></script>
+<script src="https://cdn.realtimecat.com/realtimecat/realtimecat-0.3-alpha.min.js"></script>
 ```
 
 ### 使用包管理软件加载实时猫SDK
@@ -26,13 +28,13 @@
 如果使用Bower作为包管理器，直接运行以下命令安装实时猫JavaScript SDK：
 
 ```bash
-$ bower install realtimecatjs#~0.2 --save
+$ bower install realtimecatjs#0.3.0-alpha.1 --save
 ```
 
 如果使用NPM，直接运行以下命令安装：
 
 ```bash
-$ npm install realtimecatjs@~0.2 --save
+$ npm install realtimecatjs@next --save
 ```
 
 在使用包管理软件安装完成后，仍需要在具体HTML页面中，引入下载好的实时猫JavaScript SDK。
@@ -40,6 +42,16 @@ $ npm install realtimecatjs@~0.2 --save
 本SDK同时符合AMD和CommonJS的规范，你可以通过RequireJS或者`require('realtimecatjs')`的方式来调用实时猫JavaScript SDK。
 
 ## Changelog
+
+v0.3 alpha
+
+增加 Relay 模式 (私有云用户内测中，目前公有云用户不可使用)
+移除 RTCat.Detect 模块
+
+修复以下 Bug
+
+修复和Android端连接时，Android端无音视频问题
+修复 Firefox 部分不兼容问题
 
 0.2.8 修复stream.stop()方法的bug
 
