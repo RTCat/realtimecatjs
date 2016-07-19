@@ -28,13 +28,13 @@
 如果使用Bower作为包管理器，直接运行以下命令安装实时猫JavaScript SDK：
 
 ```bash
-$ bower install realtimecatjs#0.3.0-alpha.1 --save
+$ bower install realtimecatjs --save
 ```
 
 如果使用NPM，直接运行以下命令安装：
 
 ```bash
-$ npm install realtimecatjs@next --save
+$ npm install realtimecatjs --save
 ```
 
 在使用包管理软件安装完成后，仍需要在具体HTML页面中，引入下载好的实时猫JavaScript SDK。
@@ -43,7 +43,7 @@ $ npm install realtimecatjs@next --save
 
 ## Changelog
 
-v0.3 alpha
+v0.3
 
 增加 Relay 模式 (私有云用户内测中，目前公有云用户不可使用)
 移除 RTCat.Detect 模块
