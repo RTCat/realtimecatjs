@@ -41,11 +41,11 @@ $ npm install realtimecatjs@next --save
 
 本SDK同时符合AMD和CommonJS的规范，你可以通过RequireJS或者`require('realtimecatjs')`的方式来调用实时猫JavaScript SDK。
 
-## 在线文档地址
-
-[http://rtc-docs.readthedocs.io/zh_CN/latest/03.%20web.html](http://rtc-docs.readthedocs.io/zh_CN/latest/03.%20web.html)
-
 ## Changelog
+
+v0.4
+
+待添加
 
 v0.3
 
@@ -77,3 +77,4 @@ v0.3
 - 开发者中心：https://shishimao.com/developer-center
 - 技术演示：https://shishimao.com/rooms
 - Dashboard：https://dashboard.shishimao.com/
+- 0.4版JS SDK在线文档地址: [http://rtc-docs.readthedocs.io/zh_CN/latest/03.%20web.html](http://rtc-docs.readthedocs.io/zh_CN/latest/03.%20web.html)
