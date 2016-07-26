@@ -12,7 +12,7 @@
 
 选择以下方式中的任意一种加载实时猫 JS SDK。
 
-### 直接使用实时猫CDN
+### 直接使用实时猫CDN(暂不可用)
 
 通过引入CDN上的实时猫JavaScript文件，可以直接在页面内加载实时猫JavaScript SDK。
 
@@ -28,18 +28,22 @@
 如果使用Bower作为包管理器，直接运行以下命令安装实时猫JavaScript SDK：
 
 ```bash
-$ bower install realtimecatjs --save
+$ bower install realtimecatjs#0.4.0-alpha.1 --save
 ```
 
 如果使用NPM，直接运行以下命令安装：
 
 ```bash
-$ npm install realtimecatjs --save
+$ npm install realtimecatjs@next --save
 ```
 
 在使用包管理软件安装完成后，仍需要在具体HTML页面中，引入下载好的实时猫JavaScript SDK。
 
 本SDK同时符合AMD和CommonJS的规范，你可以通过RequireJS或者`require('realtimecatjs')`的方式来调用实时猫JavaScript SDK。
+
+## 在线文档地址
+
+[http://rtc-docs.readthedocs.io/zh_CN/latest/03.%20web.html](http://rtc-docs.readthedocs.io/zh_CN/latest/03.%20web.html)
 
 ## Changelog
 
