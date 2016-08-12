@@ -6,13 +6,11 @@
 
 开发者通过实时猫JS SDK，可以进行Web端的实时视频开发。
 
-此版本实时猫JS SDK为处于测试发布阶段的v0.4 alpha版。
-
 ## 下载实时猫 JS SDK
 
 选择以下方式中的任意一种加载实时猫 JS SDK。
 
-### 直接使用实时猫CDN(暂不可用)
+### 直接使用实时猫CDN
 
 通过引入CDN上的实时猫JavaScript文件，可以直接在页面内加载实时猫JavaScript SDK。
 
@@ -20,7 +18,7 @@
     
 ```html
 <!-- 加载实时猫 JavaScript SDK -->
-<script src="https://cdn.realtimecat.com/realtimecat/realtimecat-0.3-alpha.min.js"></script>
+<script src="https://cdn.realtimecat.com/realtimecat/realtimecat-0.4.0.min.js"></script>
 ```
 
 ### 使用包管理软件加载实时猫SDK
@@ -28,13 +26,13 @@
 如果使用Bower作为包管理器，直接运行以下命令安装实时猫JavaScript SDK：
 
 ```bash
-$ bower install realtimecatjs#0.4.0-alpha.1 --save
+$ bower install realtimecatjs#0.4.0 --save
 ```
 
 如果使用NPM，直接运行以下命令安装：
 
 ```bash
-$ npm install realtimecatjs@next --save
+$ npm install realtimecatjs --save
 ```
 
 在使用包管理软件安装完成后，仍需要在具体HTML页面中，引入下载好的实时猫JavaScript SDK。
@@ -45,7 +43,55 @@ $ npm install realtimecatjs@next --save
 
 v0.4
 
-待添加
+新增功能:
+
+- 日志功能增加 Mos 平均主观意见评分
+- 增加用户内部测试的服务器 Relay 模式
+- 增加 localStream.release() 方法，用于回收本地流资源。
+
+更改方法:
+
+- 将 Stream 分为 本地流 LocalStream 和 远程流 RemoteStream , 本地流和远程流继承 抽象流 AbstractStream
+- 修改 LocalStream 构造函数
+- 修改 Session 构造函数
+- stream.stop() 只回收播放器,可以用 play() 重新播放，回收本地流资源需使用 localStream.release()
+
+更改事件：
+
+```
+LocalStream:
+stream.on('access-accepted') -> stream.on('accepted')
+stream.on('access-failed') -> stream.on('error')
+
+
+Session:
+session.on('send_error') -> session.on('error')
+session.on('connect_error') -> session.on('error')
+session.on('channel_error') -> session.on('error')
+
+Sender:
+sender.getReceiver() -> sender.getReceiverToken()
+sender.attr -> sender.getAttr()
+sender.on('file_sending_error') -> sender.on('error')
+sender.on('send_error') -> sender.on('error')
+sender.on('sender_connect_error') -> sender.on('error')
+sender.on('dataChannel_error') -> sender.on('channel_error')
+sender.on('dataChannel_close') -> sender.on('channel_close')
+sender.on('dataChannel_open') -> sender.on('channel_open')
+
+Receiver:
+receiver.getSender() -> receiver.getSenderToken()
+receiver.attr -> receiver.getAttr()
+receiver.on('receiver_connect_error') -> receiver.on('error')
+receiver.on('dataChannel_error') -> receiver.on('channel_error')
+receiver.on('dataChannel_close') -> receiver.on('channel_close')
+receiver.on('dataChannel_open') -> receiver.on('channel_open')
+```
+
+移除方法：
+
+- 移除 LocalStream.getCapture()
+
 
 v0.3
 
