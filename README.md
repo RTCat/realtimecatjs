@@ -43,18 +43,34 @@ $ npm install realtimecatjs --save
 
 v0.4
 
-新增功能:
+增加方法：
 
-- 日志功能增加 Mos 平均主观意见评分
-- 增加用户内部测试的服务器 Relay 模式
-- 增加 localStream.release() 方法，用于回收本地流资源。
+- 增加`Mos`平均主观意见评分
+- 增加用户内部测试的服务器`Relay`模式
+- 增加 LocalStream.release() 方法，用于回收本地流资源。
+- 增加 RTCat.detect() 用于测试浏览器兼容性和网速。
+
+增加事件：
+
+```
+Sender:
+sender.on('file_channel_open') 发文件通道打开
+sender.on('file_channel_close') 发文件通道关闭
+sender.on('file_channel_error') 发文件通道出错
+
+Receiver:
+receiver.on('file_channel_open') 发文件通道打开
+receiver.on('file_channel_close') 发文件通道关闭
+receiver.on('file_channel_error') 发文件通道出错
+```
+
 
 更改方法:
 
-- 将 Stream 分为 本地流 LocalStream 和 远程流 RemoteStream , 本地流和远程流继承 抽象流 AbstractStream
-- 修改 LocalStream 构造函数
-- 修改 Session 构造函数
-- stream.stop() 只回收播放器,可以用 play() 重新播放，回收本地流资源需使用 localStream.release()
+- 将 `Stream` 分为 本地流 `LocalStream` 和 远程流 `RemoteStream` , 本地流和远程流继承 抽象流 `AbstractStream`
+- 修改`LocalStream`构造函数
+- 修改`Session`构造函数
+- stream.stop方法只回收播放器,可以用play方法重新播放，回收本地流资源需使用`LocalStream.release`方法
 
 更改事件：
 
