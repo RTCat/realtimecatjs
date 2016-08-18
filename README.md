@@ -49,6 +49,7 @@ v0.4
 - 增加用户内部测试的服务器`Relay`模式
 - 增加 LocalStream.release() 方法，用于回收本地流资源。
 - 增加 RTCat.detect() 用于测试浏览器兼容性和网速。
+- 增加stream.detectVolume() 方法，用于检测音量
 
 增加事件：
 
