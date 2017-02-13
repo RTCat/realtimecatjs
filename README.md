@@ -4,11 +4,11 @@
 
 实时猫 JS SDK是实时猫客户端库的一部分，实时猫客户端库的主要目的是通过对连接实时猫云WebRTC服务器功能的封装，大大简化开发实时交互应用的难度，并可以使用实时猫提供的高级WebRTC功能。
 
-开发者通过实时猫JS SDK，可以进行Web端的实时视频开发。
+开发者通过实时猫JS SDK，可以进行Web端的实时音视频开发。
 
 ## 下载实时猫 JS SDK
 
-选择以下方式中的任意一种加载实时猫 JS SDK。
+选择以下方式中的任意一种下载实时猫 JS SDK。
 
 ### 直接使用实时猫CDN
 
@@ -18,28 +18,50 @@
     
 ```html
 <!-- 加载实时猫 JavaScript SDK -->
-<script src="https://cdn.realtimecat.com/realtimecat/realtimecat-0.4.min.js"></script>
+<script src="https://unpkg.com/realtimecatjs@alpha"></script>
 ```
 
 ### 使用包管理软件加载实时猫SDK
 
-如果使用Bower作为包管理器，直接运行以下命令安装实时猫JavaScript SDK：
+使用NPM，运行以下命令安装：
 
 ```bash
-$ bower install realtimecatjs#0.4.0 --save
+$ npm install realtimecatjs@alpha --save
 ```
 
-如果使用NPM，直接运行以下命令安装：
+使用Bower，运行以下命令安装：
 
 ```bash
-$ npm install realtimecatjs --save
+$ bower install realtimecatjs#0.5.0-alpha.4 --save
 ```
 
 在使用包管理软件安装完成后，仍需要在具体HTML页面中，引入下载好的实时猫JavaScript SDK。
 
-本SDK同时符合AMD和CommonJS的规范，你可以通过RequireJS或者`require('realtimecatjs')`的方式来调用实时猫JavaScript SDK。
+本SDK使用[UMD模式](https://github.com/umdjs/umd)打包，在`window`对象上增加了一个`RTCat`对象，也可以使用[AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)和[CommonJS](https://nodejs.org/docs/latest/api/modules.html)的方式来调用。
 
 ## Changelog
+
+v0.5
+
+增加：
+
+- RTCat.STREAM_TYPE对象
+	- RTCat.STREAM_TYPE.AV
+	- RTCat.STREAM_TYPE.AUDIO
+	- RTCat.STREAM_TYPE.VIDEO
+	- RTCat.STREAM_TYPE.SCREEN
+	- RTCat.STREAM_TYPE.HTML_ELEMENT
+- receiver.response方法，在Session的remote事件的listener中调用，如果不调用，则拒绝连接。
+- receive_file事件，在对方将要发送文件时触发，之后有receiver.responseFile方法，如果不调用responseFile方法，则拒绝该文件。
+	```
+	receiver.on('receive_file', (name) => {
+	    receiver.responseFile();
+	});
+	```
+
+移除方法
+
+- new RTCat.Session和new RTCat.Stream，现在只能通过RTCat.createSession和RTCat.createStream来创建Session和Stream实例，返回Promise
 
 v0.4
 
