@@ -45,23 +45,25 @@ v0.5
 
 增加：
 
-- RTCat.STREAM_TYPE对象
+- `RTCat.STREAM_TYPE`对象，包括：
 	- RTCat.STREAM_TYPE.AV
 	- RTCat.STREAM_TYPE.AUDIO
 	- RTCat.STREAM_TYPE.VIDEO
 	- RTCat.STREAM_TYPE.SCREEN
 	- RTCat.STREAM_TYPE.HTML_ELEMENT
-- receiver.response方法，在Session的remote事件的listener中调用，如果不调用，则拒绝连接。
-- receive_file事件，在对方将要发送文件时触发，之后有receiver.responseFile方法，如果不调用responseFile方法，则拒绝该文件。
+- `receiver.response`方法，在Session的remote事件的listener中调用，如果不调用，则拒绝连接。
+- `receiver`增加`receive_file`事件，在对方将要发送文件时触发。增加`receiver.responseFile`方法，在监听到`receive_file`事件后如果不调用`responseFile`方法，则拒绝该文件。
 	```
 	receiver.on('receive_file', (name) => {
 	    receiver.responseFile();
 	});
 	```
+- `Sender` 和 ``Receiver`` 增加`enableVideo`、 `enableAudio`、 `disableVideo` 、`disableAudio`方法 。用于对不同的通道中的流的音视频播放进行单独控制。
 
 移除方法
 
-- new RTCat.Session和new RTCat.Stream，现在只能通过RTCat.createSession和RTCat.createStream来创建Session和Stream实例，返回Promise
+- `new RTCat.Session`和`new RTCat.Stream`，现在只能通过`RTCat.createSession`和`RTCat.createStream`来创建Session和Stream实例，返回Promise
+- `LocalStream.toggleAudio` 、`LocalStream.toggleVideo`方法。
 
 v0.4
 
