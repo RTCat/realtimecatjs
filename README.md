@@ -32,7 +32,7 @@ $ npm install realtimecatjs@alpha --save
 使用Bower，运行以下命令安装：
 
 ```bash
-$ bower install realtimecatjs#0.5.0-alpha.4 --save
+$ bower install realtimecatjs#0.5.0-alpha --save
 ```
 
 在使用包管理软件安装完成后，仍需要在具体HTML页面中，引入下载好的实时猫JavaScript SDK。
