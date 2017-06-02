@@ -1,6 +1,6 @@
 {
   "name": "realtimecatjs",
-  "version": "0.5.0-alpha.12",
+  "version": "0.5.0-alpha.13",
   "description": "Realtimecat JS SDK",
   "main": "realtimecat.min.js",
   "repository": {
