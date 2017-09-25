@@ -1,8 +1,8 @@
 {
   "name": "realtimecatjs",
-  "version": "0.6.0-alpha.1",
+  "version": "0.6.0-alpha.2",
   "description": "Realtimecat JS SDK",
-  "main": "realtimecat.min.js",
+  "main": "realtimecat.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RTCat/realtimecatjs.git"

@@ -18,7 +18,7 @@
     
 ```html
 <!-- 加载实时猫 JavaScript SDK -->
-<script src="https://unpkg.com/realtimecatjs@alpha"></script>
+<script src="https://unpkg.com/realtimecatjs@next"></script>
 ```
 
 ### 使用包管理软件加载实时猫SDK
@@ -26,20 +26,22 @@
 使用NPM，运行以下命令安装：
 
 ```bash
-$ npm install realtimecatjs@alpha --save
+$ npm install realtimecatjs@next --save
 ```
 
 使用Bower，运行以下命令安装：
 
 ```bash
-$ bower install realtimecatjs#0.5.0-alpha --save
+$ bower install realtimecatjs#0.6.0-alpha.2 --save
 ```
 
-在使用包管理软件安装完成后，仍需要在具体HTML页面中，引入下载好的实时猫JavaScript SDK。
-
-本SDK使用[UMD模式](https://github.com/umdjs/umd)打包，在`window`对象上增加了一个`RTCat`对象，也可以使用[AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)和[CommonJS](https://nodejs.org/docs/latest/api/modules.html)的方式来调用。
+在使用包管理软件安装完成后，仍需要在具体HTML页面中，引入下载好的实时猫JavaScript SDK。在`window`对象会增加一个`RTCat`对象。
 
 ## Changelog
+
+v0.6
+
+采用SFU模式
 
 v0.5
 
